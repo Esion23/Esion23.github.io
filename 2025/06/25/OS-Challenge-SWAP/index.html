@@ -14,7 +14,7 @@
 <meta property="og:description" content="前言本次代码增量在 400 行左右，和隔壁 SHELL 挑战性任务相比简直是小巫见大巫，不过我认识的倒是有几个从 SWAP 转战 SHELL 的。SWAP 挑战任务重要的是对内存管理的理解和原有代码逻辑的理解，我也是因为以为自己对这部分内容足够熟悉才选择了这个题目。写完这个题目我才对原有的内存管理有了更深的理解。 从 6 月 3 日选定这个题目、开始设计框架、在讨论区问了一系列问题，到 6 月 9">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-06-25T14:24:48.000Z">
-<meta property="article:modified_time" content="2025-06-25T14:27:44.760Z">
+<meta property="article:modified_time" content="2025-06-25T14:35:16.590Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="OS">
 <meta name="twitter:card" content="summary">
@@ -99,6 +99,8 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本次代码增量在 400 行左右，和隔壁 SHELL 挑战性任务相比简直是小巫见大巫，不过我认识的倒是有几个从 SWAP 转战 SHELL 的。SWAP 挑战任务重要的是对内存管理的理解和原有代码逻辑的理解，我也是因为以为自己对这部分内容足够熟悉才选择了这个题目。写完这个题目我才对原有的内存管理有了更深的理解。</p>
 <p>从 6 月 3 日选定这个题目、开始设计框架、在讨论区问了一系列问题，到 6 月 9 日真正开始写代码，遇到许多现象奇特的 bug、经历了重构和面对奇异现象束手无策，没日没夜在宿舍写了 7 天才过了评测。也不知道现在这个实现还有没有 bug（</p>
 <p>这个任务其实描述起来并不难，码量也不多，不过就是在管理内存的时候多了一块磁盘可以换出罢了。但是实现起来细节很多，稍微不慎从现象找问题就很困难。</p>
+<span id="more"></span>
+
 <h2 id="任务分解"><a href="#任务分解" class="headerlink" title="任务分解"></a>任务分解</h2><ul>
 <li>读写磁盘</li>
 <li>换出页面时选择页面、管理页表和 TLB</li>
@@ -164,7 +166,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/06/25/OS-Challenge-SWAP/" data-id="cmcc1xgk50000vsfbd1ds2ssk" data-title="OS-Challenge-SWAP" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/06/25/OS-Challenge-SWAP/" data-id="cmcc240nt0000fsfb6x0l8q8k" data-title="OS-Challenge-SWAP" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -174,16 +176,6 @@
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2025/06/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
   
 </article>
 
@@ -232,10 +224,6 @@
         
           <li>
             <a href="/2025/06/25/OS-Challenge-SWAP/">OS-Challenge-SWAP</a>
-          </li>
-        
-          <li>
-            <a href="/2025/06/25/hello-world/">Hello World</a>
           </li>
         
       </ul>
